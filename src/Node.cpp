@@ -108,6 +108,8 @@ Node* Node::traverseWeb(Node* node, Entry* in)	{
 	Node* LL; Node* LR; Node* RL; Node* RR;
 	double dLL, dLR, dRL, dRR;
 
+	// If there are no nodes after this one, return
+	if ((node->nodeInfo_& (1 << ELEMENTADDED)) == 0) return new Node(e);
 	short test = (node->nodeInfo_& (1 << HASRIGHTCHILD));
 	// Will search the leaf if our node is at the edge of the web
 	if (test == 0 && node->exists(node, true)) return searchLeaf(new Node(e), node->left_, in);

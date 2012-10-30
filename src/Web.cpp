@@ -155,8 +155,10 @@ void Web::build(Entry* c, int n) {
 		for (int j = NUMBITS - 1; j >= 0; j--)	{
 			// The first bits of the x coordinate choose which way the child node goes
 			cur = cur->moveDown(cur, ((testX& (1 << j)) == 0));
+			cur->nodeInfo_ |= 1 << ELEMENTADDED;
 			// The first bits of y choose which way the grandchild node is
 			cur = cur->moveDown(cur, ((testY& (1 << j)) == 0));
+			cur->nodeInfo_ |= 1 << ELEMENTADDED;
 		}
 		// Inserts a node with our entry at the desired location
 		cur->leafAdded(cur, &c[i]); 

@@ -24,9 +24,6 @@
     <ClCompile Include="..\src\Web.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
@@ -41,10 +38,7 @@
     <ClInclude Include="..\include\Web.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\targetver.h">
+    <ClInclude Include="..\include\HW04obissiam_1App.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -58,6 +52,9 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="..\resources\Starbucks_2006.csv">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\resources\US_outline.png">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

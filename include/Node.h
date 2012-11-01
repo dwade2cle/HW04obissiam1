@@ -2,12 +2,8 @@
 	A class that creates, manipulates, and searches the nodes that are used in the Web class.
 	The more complex functions exist here, as they require recursion to function properly.
 */
-#include "cinder/app/AppBasic.h"
-#include "cinder/app/App.h"
-#include "cinder/gl/gl.h"
 #include "Starbucks.h"
 #include <cmath>
-#include <iostream>
 
 using namespace std;
 // Bit values that assist in identifying different properties of the nodes

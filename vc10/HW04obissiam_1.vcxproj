@@ -106,15 +106,13 @@
   <ItemGroup>
     <ClCompile Include="..\src\HW04obissiam_1App.cpp" />
     <ClCompile Include="..\src\Node.cpp" />
-    <ClCompile Include="..\src\stdafx.cpp" />
     <ClCompile Include="..\src\Web.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\HW04obissiam_1App.h" />
     <ClInclude Include="..\include\Node.h" />
     <ClInclude Include="..\include\Resources.h" />
     <ClInclude Include="..\include\Starbucks.h" />
-    <ClInclude Include="..\include\stdafx.h" />
-    <ClInclude Include="..\include\targetver.h" />
     <ClInclude Include="..\include\Web.h" />
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +121,7 @@
   <ItemGroup>
     <None Include="..\resources\MapLocations.jpg" />
     <None Include="..\resources\Starbucks_2006.csv" />
+    <None Include="..\resources\US_outline.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

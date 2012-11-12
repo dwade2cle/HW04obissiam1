@@ -16,8 +16,9 @@ All methods are original, and may be used by anyone.
 */
 #include "Node.h"
 #include "Starbucks.h"
+#include <vector>
 
-#define NUMBITS 6
+#define NUMBITS 5
 class Web : public Starbucks
 {
 	public:
@@ -35,6 +36,9 @@ class Web : public Starbucks
 		virtual void build(Entry* c, int n);
 		// Searches for the closest entry to the value we use
 		virtual Entry* getNearest(double x, double y);
+		// Returns all of the locations after a given root
+		virtual void getAllLocations(Node* root, vector<Entry>* locations);
+
 
 	private:
 		Node* root_;

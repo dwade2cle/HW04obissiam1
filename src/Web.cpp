@@ -9,6 +9,13 @@ Web::Web(Node* root)	{
 
 // Here we have a Web constructor.  It's job is to create the initial nodes for the structure.
 Web::Web(Node* root, char numBits)	{
+	if (numBits == 0) return;
+	root->insertNode(root, new Entry(), true);
+	root->insertNode(root, new Entry(), false);
+	Web(root->left_, numBits - 1); 
+	Web(root->right_, numBits - 1);
+}
+	/**
 	root_  = root;
 	char test;
 	int iterations = pow(2.0, numBits);
@@ -36,7 +43,7 @@ Web::Web(Node* root, char numBits)	{
 			}
 		}
 	}
-}
+}*/
 
 // Here we give spatial information about the node.  There are four types of nodes, and 
 // they branch differently.
@@ -122,7 +129,7 @@ void Web::insertTethers(Node* root, char size)	{
 // web, then adds the array of Entry objects.
 void Web::build(Entry* c, int n) {
 	// Creat the initail web structure
-	Web* web = new Web(root_, NUMBITS);
+	Web* web = new Web(root_, 2*NUMBITS);
 	// Set values at first two child nodes
 	root_->left_->nodeInfo_ |= 0 << LOCATIONBIT0;
 	root_->left_->nodeInfo_ |= 0 << LOCATIONBIT1;
@@ -178,4 +185,14 @@ Entry* Web::getNearest(double x, double y) {
 	}
 	cur = cur->searchThreads(cur, e);
 	return cur->data_;
+}
+
+void Web::getAllLocations(Node* root, vector<Entry>* locations)	{
+	if (root->exists(root, true) && root->exists(root, false)) {
+		getAllLocations(root->left_, locations);
+		getAllLocations(root->right_, locations);
+	} else if (root->exists(root, true)) {
+		(*locations).push_back(*(root->left_->data_));
+		getAllLocations(root->left_, locations);
+	} else return;
 }

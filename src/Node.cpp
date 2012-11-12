@@ -80,6 +80,7 @@ void Node::leafAdded(Node* node, Entry* in)	{
 		// Here the new node will go in front of the old one
 		if(distance2 < distance1)	{
 			Node* newNode = new Node(in);
+			newNode->nodeInfo_ |= 1 << HASLEFTCHILD;
 			newNode->left_ = node->left_;
 			node->left_->parent_ = newNode;
 			newNode->parent_ = node;

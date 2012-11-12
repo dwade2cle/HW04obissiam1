@@ -121,7 +121,7 @@
   <ItemGroup>
     <None Include="..\resources\MapLocations.jpg" />
     <None Include="..\resources\Starbucks_2006.csv" />
-    <None Include="..\resources\US_outline.png" />
+    <None Include="..\resources\US_outline.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

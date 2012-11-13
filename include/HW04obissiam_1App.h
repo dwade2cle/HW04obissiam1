@@ -37,13 +37,25 @@ private:
 	Entry* currentStarbucks;
 	double magicNumber;
 	Node* currentNode;
+	bool topRight;
 
 	// For animation
 	int frame_number_;
 	boost::posix_time::ptime app_start_time_;
 
+	// Loads an image onto our surface
+	// Starts to fulfill A
 	void imageToSurface(uint8_t* surface, uint8_t* image);
+	// Shows how close each pixel is to a starbucks location
+	// Fulfills C in a different way
+	void proximityMap();
+	// Draws a circle at a starbucks location
 	void circle(uint8_t* surface, int centerX, int centerY, int radius, Color8u fillColor);
-	void drawMap(Node* root, bool zoom, int x, int y, double magicNumber);
+	// Zooms to one corner of the map
+	// Fulfills half of D
+	void drawMap(uint8_t* picture, Node* root, bool zoom, int x, int y, double magicNumber);
+	// Draws a map based on the census information
+	// Fulfills F
+	void censusMap(uint8_t* picture);
 
 };

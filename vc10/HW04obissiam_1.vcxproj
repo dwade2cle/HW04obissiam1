@@ -119,6 +119,7 @@
     <ResourceCompile Include="Resources.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\resources\Census_2010.csv" />
     <None Include="..\resources\MapLocations.jpg" />
     <None Include="..\resources\Starbucks_2006.csv" />
     <None Include="..\resources\US_outline.bmp" />

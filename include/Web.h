@@ -18,7 +18,8 @@ All methods are original, and may be used by anyone.
 #include "Starbucks.h"
 #include <vector>
 
-#define NUMBITS 5
+#define NUMBITS 4
+
 class Web : public Starbucks
 {
 	public:
